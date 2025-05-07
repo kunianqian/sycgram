@@ -2,8 +2,8 @@
 clear
 
 CONTAINER_NAME="sycgram"
-GITHUB_IMAGE_NAME="h88782481/${CONTAINER_NAME}"
-GITHUB_IMAGE_PATH="ghcr.io/${GITHUB_IMAGE_NAME}"
+GITHUB_IMAGE_NAME="kunianqian/${CONTAINER_NAME}"  # 更新仓库名
+GITHUB_IMAGE_PATH="ghcr.io/${GITHUB_IMAGE_NAME}"  # 更新仓库名
 #PROJECT_PATH="/opt/${CONTAINER_NAME}"
 PROJECT_VERSION="v4.0.1"
 
@@ -47,7 +47,7 @@ pre_check() {
 delete_old_image_and_container(){
     # 获取最新指令说明
     # 远程file
-    remote_file="https://raw.githubusercontent.com/h88782481/sycgram/main/data/command.yml"
+    remote_file="https://raw.githubusercontent.com/kunianqian/sycgram/main/data/command.yml"  # 更新为新仓库的文件路径
     # 本地file
     local_cmd_file="${PROJECT_PATH}/data/command.yml"
     if [[ -f ${local_cmd_file} ]]; then
